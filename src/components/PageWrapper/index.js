@@ -1,10 +1,10 @@
 import React from "react";
 
 export default props => {
+    const style = props.sideBarOpened ? { marginLeft: 230 } : { margin: 0 };
+
     return (
-        <div className="page-wrapper" style={{
-            marginLeft: props.sideBarOpened ? 230 : 0
-        }}>
+        <div className="page-wrapper" style={style}>
         <div className="topbar">
             <nav className="navbar-custom">
             <ul className="list-unstyled topbar-nav float-end mb-0">
