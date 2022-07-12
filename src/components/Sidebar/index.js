@@ -1,6 +1,7 @@
 import React from "react";
 
 export default props => {
+    if (!props.opened) return <></>
     return (
         <div className="left-sidenav">
         <div className="brand">

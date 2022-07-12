@@ -2,7 +2,9 @@ import React from "react";
 
 export default props => {
     return (
-        <div className="page-wrapper">
+        <div className="page-wrapper" style={{
+            marginLeft: props.sideBarOpened ? 230 : 0
+        }}>
         <div className="topbar">
             <nav className="navbar-custom">
             <ul className="list-unstyled topbar-nav float-end mb-0">
@@ -360,7 +362,7 @@ export default props => {
                 </li>
             </ul>
             <ul className="list-unstyled topbar-nav mb-0">
-                <li>
+                <li onClick={props.toggleSideBar}>
                 <button className="nav-link button-menu-mobile">
                     <svg
                     width={24}
