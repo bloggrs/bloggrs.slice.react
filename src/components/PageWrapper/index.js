@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default props => {
     const style = props.sideBarOpened ? { marginLeft: 230 } : { margin: 0 };
-
+    console.log(props.children)
     return (
         <div className="page-wrapper" style={style}>
         <div className="topbar">
@@ -140,7 +141,7 @@ export default props => {
                                 <div className="media">
                                     <div className="avatar-md bg-soft-primary">
                                     <img
-                                        src="assets/images/users/user-4.jpg"
+                                        src="/assets/images/users/user-4.jpg"
                                         alt=""
                                         className="thumb-sm rounded-circle"
                                     />
@@ -197,7 +198,7 @@ export default props => {
                                 <div className="media">
                                     <div className="avatar-md bg-soft-primary">
                                     <img
-                                        src="assets/images/users/user-5.jpg"
+                                        src="/assets/images/users/user-5.jpg"
                                         alt=""
                                         className="thumb-sm rounded-circle"
                                     />
@@ -292,7 +293,7 @@ export default props => {
                 >
                     <span className="ms-1 nav-user-name hidden-sm">Nick</span>
                     <img
-                    src="assets/images/users/user-5.jpg"
+                    src="/assets/images/users/user-5.jpg"
                     alt="profile-user"
                     className="rounded-circle thumb-xs"
                     />
@@ -384,11 +385,11 @@ export default props => {
                 </button>
                 </li>
                 <li className="creat-btn">
-                <div className="nav-link">
-                    <a className=" btn btn-sm btn-soft-primary" href="#" role="button">
-                    <i className="fas fa-plus me-2" />
-                    New Task
-                    </a>
+                <div className="nav-link" style={{ display: Boolean(props.newButton) ? "block" : "hidden" }}>
+                    <Link className=" btn btn-sm btn-soft-primary" to={props.newButton?.to || "#"} role="button">
+                        <i className="fas fa-plus me-2" />
+                        {props.newButton?.label}
+                    </Link>
                 </div>
                 </li>
             </ul>

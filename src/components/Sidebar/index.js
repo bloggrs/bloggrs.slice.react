@@ -1,5 +1,6 @@
 import React from "react";
 import FeatherIcon from "feather-icons-react";
+import Item from "./Item";
 
 export default props => {
     if (!props.opened) return <></>
@@ -9,19 +10,19 @@ export default props => {
             <a href="index.html" className="logo">
             <span>
                 <img
-                src="assets/images/logo-sm.png"
+                src="/assets/images/logo-sm.png"
                 alt="logo-small"
                 className="logo-sm"
                 />
             </span>
             <span>
                 <img
-                src="assets/images/logo.png"
+                src="/assets/images/logo.png"
                 alt="logo-large"
                 className="logo-lg logo-light"
                 />
                 <img
-                src="assets/images/logo-dark.png"
+                src="/assets/images/logo-dark.png"
                 alt="logo-large"
                 className="logo-lg logo-dark"
                 />
@@ -45,83 +46,11 @@ export default props => {
                     >
                     <ul className="metismenu left-sidenav-menu">
                         <li className="menu-label mt-0">Main</li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                {" "}
-                                <svg
-                                width={24}
-                                height={24}
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="feather feather-home align-self-center menu-icon"
-                                >
-                                <g>
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                                    <polyline points="9 22 9 12 15 12 15 22" />
-                                </g>
-                                </svg>
-                                <span>Dashboard</span>
-                                <span className="menu-arrow">
-                                <i className="mdi mdi-chevron-right" />
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                {" "}
-                                <FeatherIcon icon="list"
-                                    className="feather feather-home align-self-center menu-icon"
-                                >
-                                </FeatherIcon>
-                                <span>Posts</span>
-                                <span className="menu-arrow">
-                                <i className="mdi mdi-chevron-right" />
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                {" "}
-                                <FeatherIcon icon="message-square"
-                                    className="feather feather-home align-self-center menu-icon"
-                                >
-                                </FeatherIcon>
-                                <span>Posts</span>
-                                <span className="menu-arrow">
-                                <i className="mdi mdi-chevron-right" />
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                {" "}
-                                <FeatherIcon icon="user"
-                                    className="feather feather-home align-self-center menu-icon"
-                                >
-                                </FeatherIcon>
-                                <span>Teams</span>
-                                <span className="menu-arrow">
-                                <i className="mdi mdi-chevron-right" />
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                {" "}
-                                <FeatherIcon icon="settings"
-                                    className="feather feather-home align-self-center menu-icon"
-                                >
-                                </FeatherIcon>
-                                <span>Settings</span>
-                                <span className="menu-arrow">
-                                <i className="mdi mdi-chevron-right" />
-                                </span>
-                            </a>
-                        </li>
+                        <Item label={"Dashboard"} to="/" icon="home" className="feather feather-home align-self-center menu-icon"/>
+                        <Item label={"Posts"} to="/posts" icon="list"/>
+                        <Item label={"Comments"} to="/comments" icon="message-square"/>
+                        <Item label={"Teams"} to="/teams" icon="user"/>
+                        <Item label={"Settings"} to="/settings" icon="settings"/>
                     </ul>
                     <div className="update-msg text-center">
                         <a
