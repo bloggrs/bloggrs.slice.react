@@ -396,6 +396,7 @@ export default props => {
         </div>
         <div className="page-content">
             <div className="container-fluid">
+                {props.children}
             </div>
             <footer className="footer text-center text-sm-start">
             © Dastone{" "}
