@@ -1,6 +1,6 @@
 /**
  * Theme: Dastone - Responsive Bootstrap 5 Admin Dashboard
- * Author: Mannatthemes
+ * Author: Bloggrs
  * Profile Js
  */
 
@@ -11,7 +11,7 @@ var cities = L.layerGroup();
 	L.marker([21.17, 72.83]).bindPopup('This is Mannat Themes, CO.').addTo(cities);
 
 
-	var mbAttr = 'Website - <a href="https://mannatthemes.com/" target="_blank">Mannatthemes</a> '
+	var mbAttr = 'Website - <a href="https://Bloggrs.com/" target="_blank">Bloggrs</a> '
 		mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
 	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr}),

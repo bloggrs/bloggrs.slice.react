@@ -1,6 +1,6 @@
 /**
  * Theme: Dastone - Responsive Bootstrap 4 Admin Dashboard
- * Author: Mannatthemes
+ * Author: Bloggrs
  * Module/App: Core Js
  */
 

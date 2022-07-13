@@ -1,6 +1,6 @@
 /**
  * Theme: Dastone - Responsive Bootstrap 5 Admin Dashboard
- * Author: Mannatthemes
+ * Author: Bloggrs
  * Gallery Js
  */
 
