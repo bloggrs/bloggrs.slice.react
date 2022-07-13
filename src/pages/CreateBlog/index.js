@@ -1,6 +1,27 @@
-import React from "react";
+/* eslint-disable */
+
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 export default props =>{
+    const location = useLocation();
+
+    const [ _hash, setHash ] = useState(location.hash);
+    const hash = _hash.replace("#", "");
+    
+    const func = event => {
+        setHash(location.hash) 
+    }
+    const STEP_1 = "general";
+    const STEP_2 = "category";
+    const STEP_3 = "choose_url";
+    const STEP_4 = "confirm_details";
+
+    
+    useEffect(() => {
+        addEventListener('hashchange', func);
+        return () => removeEventListener('hashchange', func);
+    })
     return (
         <div className="card-body">
         <form
@@ -18,7 +39,7 @@ export default props =>{
                     >
                     <a
                         id="form-horizontal-t-0"
-                        href="#form-horizontal-h-0"
+                        href="#general"
                         aria-controls="form-horizontal-p-0"
                     >
                         <span className="number">1.</span> General details
@@ -32,7 +53,7 @@ export default props =>{
                     >
                     <a
                         id="form-horizontal-t-1"
-                        href="#form-horizontal-h-1"
+                        href="#category"
                         aria-controls="form-horizontal-p-1"
                     >
                         <span className="number">2.</span> Category 
@@ -46,7 +67,7 @@ export default props =>{
                     >
                     <a
                         id="form-horizontal-t-2"
-                        href="#form-horizontal-h-2"
+                        href="#choose_url"
                         aria-controls="form-horizontal-p-2"
                     >
                         {/* <span className="current-info audible">current step: </span> */}
@@ -61,7 +82,7 @@ export default props =>{
                     >
                     <a
                         id="form-horizontal-t-3"
-                        href="#form-horizontal-h-3"
+                        href="#confirm_details"
                         aria-controls="form-horizontal-p-3"
                     >
                         <span className="number">4.</span> Confirm details
@@ -69,7 +90,7 @@ export default props =>{
                     </div>
                 </div>
             </div>
-            <div className="container-fluid">
+            <div style={{ display: hash === STEP_1 ? "block" : "none" }} className="container-fluid">
   <div className="container row">
     <h4 className="mt-4 mb-4">General details</h4>
     <div className="col-md-8 row">
@@ -145,11 +166,29 @@ export default props =>{
           defaultValue={""}
         />
       </div>
+      <div style={{ display: "flex", marginTop: "2vh" }}>
+  <div style={{ width: "50%", textAlign: "left" }}>
+    <button
+      className="btn btn-outline-light"
+      style={{ right: "-6vw", marginRight: "2vw" }}
+    >
+      Previous
+    </button>
+  </div>
+  <div style={{ width: "50%", textAlign: "right", display: "inline" }}>
+    <button
+      className="btn btn-outline-primary"
+      style={{ right: "-6vw", marginRight: "0.5vw" }}
+    >
+      Continue
+    </button>
+  </div>
+</div>
+
     </div>
   </div>
 </div>
-<hr/>
-<div className="container-fluid">
+<div style={{ display: hash === STEP_2 ? "block" : "none" }} className="container-fluid">
   <div className="container row">
     <h4 className="mt-4 mb-4">Blog Category</h4>
     <div className="col-6">
@@ -276,11 +315,10 @@ export default props =>{
   </div>
 </div>
 
-            <div className="actions clearfix">
+            <div style={{ display: hash === STEP_2 ? "block" : "none" }} className="actions clearfix">
             </div>
         </form>
-        <hr/>
-        <div className="container row">
+        <div style={{ display: hash === STEP_3 ? "block" : "none" }} className="container row">
   <h4 className="mt-4 mb-4">Choose URL</h4>
   <div className="col-md-8 row">
     <div className="col-2" style={{ margin: "auto" }}>
@@ -312,9 +350,8 @@ export default props =>{
         </div>
     </div>
 </div>
-        <hr/>
-        <div className="container row">
-  <h4 className="mt-4 mb-4">General details</h4>
+        <div style={{ display: hash === STEP_4 ? "block" : "none" }} className="container row">
+  <h4 className="mt-4 mb-4">Confirm details</h4>
   <div className="col-md-8 row">
     <div className="col-2" style={{ margin: "auto" }}>
       <label className="mt-2 form-label mb-lg-0 text-end">Thumbnail: </label>
