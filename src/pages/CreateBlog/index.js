@@ -25,10 +25,10 @@ export default props =>{
     const STEPS = [ STEP_1, STEP_2, STEP_3, STEP_4 ] ;
     const getDoneClassOrEmpty = STEP => {
         const index = STEPS.indexOf(STEP);
-        const current = STEPS.indexOf(hash);
+        const _current = STEPS.indexOf(hash);
+        const current = _current === -1 ? 0 : _current
         const same = index === current;
         const more = current > index;
-        console.log({ STEP, hash, same, more, index, current })
         if (same) { return "current"; }
         else if (more) return "done"
         return ""
@@ -101,7 +101,7 @@ export default props =>{
                     </div>
                 </div>
             </div>
-            <div style={{ display: hash === STEP_1 ? "block" : "none" }} className="container-fluid">
+            <div style={{ display: hash === STEP_1 || !hash ? "block" : "none" }} className="container-fluid">
   <div className="container row">
     <h4 className="mt-4 mb-4">General details</h4>
     <div className="col-md-8 row">
@@ -368,7 +368,7 @@ export default props =>{
       <label className="mt-2 form-label mb-lg-0 text-end">Thumbnail: </label>
     </div>
     <div className="col-2 card-body m-auto">
-      <div className="dropify-wrapper" style={{ height: "313.993px", backgroundImage: "url(https://i.ytimg.com/vi/xUd_PT6HVMw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFbyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUi7F45f5aTSYeqVlPuPUe4OIMyA)" }}>
+      <div className="" style={{ height: "313.993px", backgroundImage: "url(https://i.ytimg.com/vi/xUd_PT6HVMw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFbyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUi7F45f5aTSYeqVlPuPUe4OIMyA)" }}>
       </div>
     </div>
   </div>
