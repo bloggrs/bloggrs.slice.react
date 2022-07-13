@@ -44,7 +44,6 @@ export default props =>{
                 <div role="tablist" style={{ display: "flex", marginLeft: "1vw", marginBottom: "1vh"  }}>
                     <div
                     role="tab"
-                    className="first done"
                     aria-disabled="false"
                     aria-selected="false"
                     className={ "first " + getDoneClassOrEmpty(STEP_1) }
