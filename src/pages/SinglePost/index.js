@@ -20,8 +20,7 @@ export default props => {
             <div className="col-md-3" style={{
                 margin: 0, padding: 0, marginLeft: "auto"
             }}>
-                <div className="card" style={{
-                    width: "22%",
+                <div className="card posts-rightbar" style={{
                     height: "95vh",
                     position: "fixed"
                 }}>
