@@ -3,7 +3,7 @@ import React from "react";
 export default props => {
     return (
       <div className="row mt-3 ml-3">
-        <div className="col-lg-5" style={{ margin: 5 }}>
+        <div className="col-lg-5 dashboard-leftrow" style={{ margin: 5 }}>
             <div className="mt-auto row">
                 <div className="card mb-3">
                     <div className="row no-gutters">
@@ -181,7 +181,7 @@ export default props => {
       </div>
 
         </div>
-        <div className="col-lg-5 p-2 ml-3">
+        <div className="col-lg-5 p-2 ml-3 dashboard-analytics">
           <div className="card">
               <div className="card-header">
                 Analytics

@@ -38,17 +38,21 @@ const InfoTabModalBody = props => {
                 </div>
                 <div className="form-group row">
                     <label className="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center">
-                    Company Name
+                    Email Address
                     </label>
                     <div className="col-lg-9 col-xl-8">
-                    <input
-                        className="form-control"
+                    <div className="input-group">
+                        <span className="input-group-text">
+                        <i className="las la-at" />
+                        </span>
+                        <input
                         type="text"
-                        defaultValue="Bloggrs"
-                    />
-                    <span className="form-text text-muted font-12">
-                        We'll never share your email with anyone else.
-                    </span>
+                        className="form-control"
+                        defaultValue="rosa.dodson@demo.com"
+                        placeholder="Email"
+                        aria-describedby="basic-addon1"
+                        />
+                    </div>
                     </div>
                 </div>
                 <div className="form-group row">
@@ -65,25 +69,6 @@ const InfoTabModalBody = props => {
                         className="form-control"
                         defaultValue={+123456789}
                         placeholder="Phone"
-                        aria-describedby="basic-addon1"
-                        />
-                    </div>
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center">
-                    Email Address
-                    </label>
-                    <div className="col-lg-9 col-xl-8">
-                    <div className="input-group">
-                        <span className="input-group-text">
-                        <i className="las la-at" />
-                        </span>
-                        <input
-                        type="text"
-                        className="form-control"
-                        defaultValue="rosa.dodson@demo.com"
-                        placeholder="Email"
                         aria-describedby="basic-addon1"
                         />
                     </div>
@@ -699,43 +684,6 @@ export default props => {
                         </ul>
                         </div>
                         {/*end col*/}
-                        <div className="col-lg-4 align-self-center">
-                        <div className="row">
-                            <div className="col-auto text-end border-end">
-                            <button
-                                type="button"
-                                className="btn btn-soft-primary btn-icon-circle btn-icon-circle-sm mb-2"
-                            >
-                                <i className="fab fa-facebook-f" />
-                            </button>
-                            <p className="mb-0 fw-semibold">Facebook</p>
-                            <h4 className="m-0 fw-bold">
-                                25k{" "}
-                                <span className="text-muted font-12 fw-normal">
-                                Followers
-                                </span>
-                            </h4>
-                            </div>
-                            {/*end col*/}
-                            <div className="col-auto">
-                            <button
-                                type="button"
-                                className="btn btn-soft-info btn-icon-circle btn-icon-circle-sm mb-2"
-                            >
-                                <i className="fab fa-twitter" />
-                            </button>
-                            <p className="mb-0 fw-semibold">Twitter</p>
-                            <h4 className="m-0 fw-bold">
-                                58k{" "}
-                                <span className="text-muted font-12 fw-normal">
-                                Followers
-                                </span>
-                            </h4>
-                            </div>
-                            {/*end col*/}
-                        </div>
-                        {/*end row*/}
-                        </div>
                         {/*end col*/}
                     </div>
                     {/*end row*/}
