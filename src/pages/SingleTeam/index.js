@@ -1,4 +1,5 @@
 import React from "react";
+import AddTeamMemberModal from "../../components/AddTeamMemberModal";
 
 export default props => {
     return (
@@ -70,7 +71,7 @@ export default props => {
       <label className="mt-2 form-label mb-lg-0 text-end">Name: </label>
     </div>
     <div className="col-2 card-body m-auto">
-      <input
+      <input    
         type="text"
         className="form-control"
         placeholder="Enter blog name.."
@@ -379,18 +380,7 @@ export default props => {
         {/*end card*/}
     </div>
     {/*end col*/}
-        <div className="col-lg-3">                <div className="" style={{ marginLeft: 10 }}>
-<div className="img-group">
-<a href="" className="avatar-box thumb-md align-self-center">
-<span className="avatar-title bg-soft-info rounded-circle font-weight-normal">
-<i className="las la-plus" />
-</span>
-</a>
-</div>
-{/*end img-group*/}
-</div>
-    {/*end col*/}
-    </div> 
+        <AddTeamMemberModal/>
     </div>
 </div>
 
