@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default props => {
     return (
@@ -51,7 +52,9 @@ export default props => {
                                 Site Role: Owner
                             </p>
                             <p className="card-text align-self-center row m-0">
+                              <Link to="/teams">
                                 <span className="special-a">Invite people</span>
+                              </Link>
                             </p>
                           </div>
                           <div className="card-body col-md-4 row m-auto">

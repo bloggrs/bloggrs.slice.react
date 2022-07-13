@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default props => {
     return (
@@ -9,9 +10,9 @@ export default props => {
                 <div className="card">
                   <div className="card-body p-0 auth-header-box">
                     <div className="text-center p-3">
-                      <a href="index.html" className="logo logo-admin">
+                      <Link to="/"  className="logo logo-admin">
                         <img src="assets/images/logo-sm-dark.png" height={50} alt="logo" className="auth-logo" />
-                      </a>
+                      </Link>
                       <h4 className="mt-3 mb-1 fw-semibold text-white font-18">Let's Get Started Dastone</h4>   
                       <p className="text-muted  mb-0">Sign in to continue to Dastone.</p>  
                     </div>

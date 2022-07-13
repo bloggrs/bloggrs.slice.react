@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 export default props => {
     return (
@@ -11,9 +12,9 @@ export default props => {
                 <div className="">
                   <div className="card-body p-0 auth-header-box">
                     <div className="text-center p-3">
-                      <a href="index.html" className="logo logo-admin">
+                      <Link to="/"  className="logo logo-admin">
                         <img src="assets/images/logo-sm-dark.png" height={50} alt="logo" className="auth-logo" />
-                      </a>
+                      </Link>
                       <h4 className="mt-3 mb-1 fw-semibold text-white font-18">Oops! Sorry page does not found</h4>   
                       <p className="text-muted  mb-0">Back to dashboard of Dastone.</p>  
                     </div>

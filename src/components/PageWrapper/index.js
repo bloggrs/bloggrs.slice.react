@@ -5,6 +5,22 @@ export default props => {
     const style = props.sideBarOpened ? { marginLeft: 230 } : { margin: 0 };
     const location = useLocation();
     const { pathname } = location;
+    
+    const minimal = pathname === "/blogs/create";
+    
+    if (minimal) {
+       return (
+        <div className="page-wrapper" style={{ marginLeft: 85 }}>
+            <div>
+                <div className="navbar-custom">
+                    <h3 className="ml-2" style={{ marginLeft: 25 }}>Setup your new blog</h3>
+                </div>
+                { props.children }}
+            </div>
+        </div>
+       )
+    }
+
     const path_of_authentication = pathname.indexOf("login") !== -1 || pathname.indexOf("register") !== -1
     if (path_of_authentication) return props.children;
     return (

@@ -1,18 +1,47 @@
 import React from "react";
 import FeatherIcon from "feather-icons-react";
 import Item from "./Item";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export default props => {
     const location = useLocation();
+    const navigate = useNavigate();
+
     const { pathname } = location;
+
+    const minimal = pathname === "/blogs/create";
+    
+    const onBlogChange = e => {
+        const { value } = e.target;
+        const redirect = value === "create";
+        if (redirect) return navigate("/blogs/create");
+    }
+    
     const path_of_authentication = pathname.indexOf("login") !== -1 || pathname.indexOf("register") !== -1
     if (path_of_authentication) return props.children;
     if (!props.opened) return <></>
+    if (minimal) {
+        return (
+            <div className="left-sidenav" style={{ minWidth: 85 }}>
+                <div className="brand">
+                    <Link to="/"  className="logo">
+                        <span>
+                            <img
+                            src="/assets/images/logo-sm.png"
+                            alt="logo-small"
+                            className="logo-sm"
+                            />
+                        </span>
+                    </Link>
+                </div>
+            </div>
+        )
+    }
     return (
         <div className="left-sidenav">
         <div className="brand">
-            <a href="index.html" className="logo">
+            <Link to="/"  className="logo">
             <span>
                 <img
                 src="/assets/images/logo-sm.png"
@@ -32,7 +61,7 @@ export default props => {
                 className="logo-lg logo-dark"
                 />
             </span>
-            </a>
+            </Link>
         </div>
         <div className="menu-content h-100" data-simplebar="init">
             <div className="simplebar-wrapper" style={{ margin: "0px 0px -70px" }}>
@@ -45,7 +74,9 @@ export default props => {
                     className="simplebar-content-wrapper"
                     style={{ height: "100%", overflow: "hidden scroll" }}
                 >
-      <div className="col-9" style={{margin: 'auto auto'}}><select className="form-select" aria-label="Default select example"><option value={4}>Gjergj's Blog</option><option value={1}>Software's Blog</option><option value={2}>Draft</option></select></div>
+      <div className="col-9" style={{margin: 'auto auto'}}><select onChange={onBlogChange} className="form-select" aria-label="Default select example"><option value={4}>Gjergj's Blog</option><option value={1}>Software's Blog</option><option value={2}>Draft</option>
+        <option  value={"create"}>Create</option>
+      </select></div>
                     <div
                     className="simplebar-content"
                     style={{ padding: "0px 0px 70px" }}
