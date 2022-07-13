@@ -87,10 +87,48 @@ export default props => {
 
                             </div>
 
-                    </div>
-                    </div>
+                </div>
+                <div className="row">
+                        <div className="input-group col-sm-8 mt-2 col form-label">
+                        <label className="col-sm-2 mt-2 col form-label">Tags: </label>
+                            <button className="btn btn-secondary" type="button" id="button-addon1"><i className="fas fa-search" /></button>
+                            <input type="text" className="form-control" placeholder="Search tags.." aria-label="Example text with button addon" aria-describedby="button-addon1" />
+
+                        </div>
+                            <div className="row" style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '10px', padding: '1px'}}>
+                                <div className="col" style={{ marginLeft: 15 }}>
+                                    <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" defaultValue id="flexCheckDefault" />
+                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                        Default checkbox
+                                    </label>
+                                    </div>
+                                    <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" defaultValue id="flexCheckChecked" defaultChecked />
+                                    <label className="form-check-label" htmlFor="flexCheckChecked">
+                                        Checked checkbox
+                                    </label>
+                                    </div>
+                                    <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" defaultValue id="flexCheckDisabled" disabled />
+                                    <label className="form-check-label" htmlFor="flexCheckDisabled">
+                                        Disabled checkbox
+                                    </label>
+                                    </div>
+                                    <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" defaultValue id="flexCheckCheckedDisabled" defaultChecked disabled />
+                                    <label className="form-check-label" htmlFor="flexCheckCheckedDisabled">
+                                        Disabled checked checkbox
+                                    </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     )
 }

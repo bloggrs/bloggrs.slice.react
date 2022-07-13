@@ -1,4 +1,5 @@
 import React from "react";
+import AddBlogToTeamModal from "../../components/AddBlogToTeamModal";
 import AddTeamMemberModal from "../../components/AddTeamMemberModal";
 
 export default props => {
@@ -95,9 +96,9 @@ export default props => {
       />
     </div>
   </div>
-  <h5 className="menu-label my-2">Team members</h5>
-
-<div className="row">
+  <div>
+    <h5 className="menu-label my-2">Team members</h5>
+    <div className="row">
     <div className="col-lg-3">
         <div className="card">
         <div className="card-body">
@@ -382,6 +383,295 @@ export default props => {
     {/*end col*/}
         <AddTeamMemberModal/>
     </div>
+  </div>
+  <div>
+    <h5 className="menu-label my-2">Access to blogs:</h5>
+    <div className="row">
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-1.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none" }}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-2.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none"}}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-3.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none"}}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-4.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none"}}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+    </div>
+    <div className="row">
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-1.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none"}}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-2.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none"}}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+    <div className="col-lg-3">
+        <div className="card">
+        <div className="card-body">
+            <div className="row">
+            <div className="col">
+                <div className="media">
+                <img
+                    src="/assets/images/users/user-3.jpg"
+                    alt="user"
+                    className="rounded-circle thumb-lg align-self-center"
+                />
+                <div className="media-body ms-3 align-self-center">
+                    <h5 className="mt-0 mb-1">Gjergj's Blog</h5>
+                    <p className="mb-0 text-muted">https://gblog.gjergjkadriu.com/</p>
+                </div>
+                </div>
+                {/*end media*/}
+            </div>
+            {/*end col*/}
+            <div className="col-auto align-self-center" style={{ display: "none"}}>
+                <ul className="list-inline mb-0">
+                <li className="list-inline-item">
+                    <a href="#" className="me-1 contact-icon">
+                    <i className="fas fa-phone" />
+                    </a>
+                    <a href="#" className="contact-icon">
+                    <i className="far fa-envelope" />
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {/*end col*/}
+            </div>
+            {/*end row*/}
+        </div>
+        {/*end card-body*/}
+        </div>
+        {/*end card*/}
+    </div>
+    {/*end col*/}
+        <AddBlogToTeamModal/>
+    </div>
+  </div>
 </div>
 
         </>

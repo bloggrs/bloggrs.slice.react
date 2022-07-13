@@ -23,7 +23,7 @@ const ConnectTabModalBody = props => {
   <input
     type="text"
     className="form-control"
-    placeholder="Search users.."
+    placeholder="Search blogs.."
     aria-label="Example text with button addon"
     aria-describedby="button-addon1"
   />
@@ -34,8 +34,7 @@ const ConnectTabModalBody = props => {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Email</th>
-            <th>Contact No</th>
+            <th>URL</th>
             <th className="text-end">Action</th>
           </tr>
         </thead>
@@ -43,14 +42,13 @@ const ConnectTabModalBody = props => {
           <tr>
             <td>
               <img
-                src="/assets/images/users/user-3.jpg"
+                src="/assets/images/blogs/user-3.jpg"
                 alt=""
                 className="rounded-circle thumb-xs me-1"
               />{" "}
-              Aaron Poulin
+              Gjergj's Blog
             </td>
-            <td>Aaron@example.com</td>
-            <td>+21 21547896</td>
+            <td><a href="https://gblog.gjergjkadriu.com/" target="_blank">https://gblog.gjergjkadriu.com/</a></td>
             <td className="text-end">
              <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault" value="true" /></div>
             </td>
@@ -58,14 +56,13 @@ const ConnectTabModalBody = props => {
           <tr>
             <td>
               <img
-                src="/assets/images/users/user-4.jpg"
+                src="/assets/images/blogs/user-4.jpg"
                 alt=""
                 className="rounded-circle thumb-xs me-1"
               />{" "}
-              Richard Ali
+              Gjergj's Blog
             </td>
-            <td>Richard@example.com</td>
-            <td>+41 21547896</td>
+            <td><a href="https://gblog.gjergjkadriu.com/" target="_blank">https://gblog.gjergjkadriu.com/</a></td>
             <td className="text-end">
               <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault" value="true" /></div>
             </td>
@@ -73,14 +70,13 @@ const ConnectTabModalBody = props => {
           <tr>
             <td>
               <img
-                src="/assets/images/users/user-5.jpg"
+                src="/assets/images/blogs/user-5.jpg"
                 alt=""
                 className="rounded-circle thumb-xs me-1"
               />{" "}
-              Juan Clark
+              Gjergj's Blog
             </td>
-            <td>Juan@example.com</td>
-            <td>+65 21547896</td>
+            <td><a href="https://gblog.gjergjkadriu.com/" target="_blank">https://gblog.gjergjkadriu.com/</a></td>
             <td className="text-end">
               <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault" value="true" /></div>
             </td>
@@ -88,14 +84,13 @@ const ConnectTabModalBody = props => {
           <tr>
             <td>
               <img
-                src="/assets/images/users/user-6.jpg"
+                src="/assets/images/blogs/user-6.jpg"
                 alt=""
                 className="rounded-circle thumb-xs me-1"
               />{" "}
-              Albert Hull
+              Gjergj's Blog
             </td>
-            <td>Albert@example.com</td>
-            <td>+88 21547896</td>
+            <td><a href="https://gblog.gjergjkadriu.com/" target="_blank">https://gblog.gjergjkadriu.com/</a></td>
             <td className="text-end">
               <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault" value="true" /></div>
             </td>
@@ -221,7 +216,7 @@ export default props => {
   <div className="modal-content">
     <div className="modal-header bg-info">
       <h6 className="modal-title m-0 text-white" id="exampleModalInfo1">
-        Add team members
+        Add blogs
       </h6>
       <button
         type="button"
@@ -244,7 +239,7 @@ export default props => {
         Connect
       </a>
     </li>
-    <li className="nav-item">
+    {/* <li className="nav-item">
       <a
         className="nav-link"
         id="Profile_Post_tab"
@@ -254,7 +249,7 @@ export default props => {
       >
         Create
       </a>
-    </li>
+    </li> */}
   </ul>
 </div>
       {modal_body}
