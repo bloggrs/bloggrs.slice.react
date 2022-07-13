@@ -22,6 +22,17 @@ export default props =>{
         addEventListener('hashchange', func);
         return () => removeEventListener('hashchange', func);
     })
+    const STEPS = [ STEP_1, STEP_2, STEP_3, STEP_4 ] ;
+    const getDoneClassOrEmpty = STEP => {
+        const index = STEPS.indexOf(STEP);
+        const current = STEPS.indexOf(hash);
+        const same = index === current;
+        const more = current > index;
+        console.log({ STEP, hash, same, more, index, current })
+        if (same) { return "current"; }
+        else if (more) return "done"
+        return ""
+    }
     return (
         <div className="card-body">
         <form
@@ -36,6 +47,7 @@ export default props =>{
                     className="first done"
                     aria-disabled="false"
                     aria-selected="false"
+                    className={ "first " + getDoneClassOrEmpty(STEP_1) }
                     >
                     <a
                         id="form-horizontal-t-0"
@@ -47,7 +59,7 @@ export default props =>{
                     </div>
                     <div
                     role="tab"
-                    className="done"
+                    className={ getDoneClassOrEmpty(STEP_2) }
                     aria-disabled="false"
                     aria-selected="false"
                     >
@@ -61,7 +73,7 @@ export default props =>{
                     </div>
                     <div
                     role="tab"
-                    className="current"
+                    className={ getDoneClassOrEmpty(STEP_3) }
                     aria-disabled="false"
                     aria-selected="true"
                     >
@@ -76,7 +88,7 @@ export default props =>{
                     </div>
                     <div
                     role="tab"
-                    className="last done"
+                    className={`last ${getDoneClassOrEmpty(STEP_4)}`}
                     aria-disabled="false"
                     aria-selected="false"
                     >
