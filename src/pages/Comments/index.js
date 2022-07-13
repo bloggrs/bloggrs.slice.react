@@ -4,7 +4,7 @@ export default props => {
     return (
         <>
       <div className="row">
-        <div className="col-sm-12">
+        <div className="col-12">
           <div className="page-title-box">
             <div className="row">
               <div className="col">
@@ -28,15 +28,45 @@ export default props => {
           </div>{/*end page-title-box*/}
         </div>{/*end col*/}
       </div>
+      <div classname="row" style={{ display: "flex" }}>
+  <div className="mb-1">
+    <div className="dataTables_length" id="datatable_length">
+      <label style={{ display: "flex" }}>
+        <span style={{ marginRight: "2vw"}}>Show</span>
+        <select
+          name="datatable_length"
+          aria-controls="datatable"
+          className="form-select form-select-sm"
+        >
+          <option value="{10}">10</option>
+          <option value="{25}">25</option>
+          <option value="{50}">50</option>
+          <option value="{100}">100</option>
+        </select>{" "}
+      </label>
+        <span className="">entries</span>
+    </div>
+  </div>
+  <div className="" style={{ marginLeft: "auto" }}>
+    <div id="datatable_filter" className="dataTables_filter">
+      <label style={{ display: "flex" }}>
+        <span style={{ margin: "auto 0", marginRight: "0.5vw" }}>Search:</span>
+        <input
+          type="search"
+          className="form-control form-control-sm"
+          placeholder=""
+          aria-controls="datatable"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+
       <div className="row mt-1">
         {/* end col */}
         <div className="col">
+
           <div className="card">
-            <div className="card-header">
-              <h4 className="card-title">Comments</h4>
-              <p className="text-muted mb-0">Manage comments of the blog
-              </p>
-            </div>{/*end card-header*/}
             <div className="card-body">
               <div className="table-responsive">
                 <table className="table table-striped mb-0">
@@ -127,23 +157,27 @@ export default props => {
                   </tbody>
                 </table>{/*end /table*/}
               </div>{/*end /tableresponsive*/}
-              <ul class="pagination mt-3 mr-auto">
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Previous">
-                                                    <span aria-hidden="true">«</span>
-                                                    <span class="sr-only">Previous</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Next">
-                                                    <span aria-hidden="true">»</span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
-                                            </li>
-                                        </ul>
+              <div className="mt-3" style={{ display: "flex" }}>
+                <div className="col-sm-12 col-md-5"><div className="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div></div>
+
+                <ul class="pagination mr-auto" style={{ marginLeft: "auto" }}>
+                                              <li class="page-item">
+                                                  <a class="page-link" href="#" aria-label="Previous">
+                                                      <span aria-hidden="true">«</span>
+                                                      <span class="sr-only">Previous</span>
+                                                  </a>
+                                              </li>
+                                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                              <li class="page-item">
+                                                  <a class="page-link" href="#" aria-label="Next">
+                                                      <span aria-hidden="true">»</span>
+                                                      <span class="sr-only">Next</span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+              </div>
             </div>{/*end card-body*/}
           </div>{/*end card*/}
         </div> {/* end col */}
