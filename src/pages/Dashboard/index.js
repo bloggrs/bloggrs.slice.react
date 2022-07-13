@@ -42,7 +42,9 @@ export default props => {
                             additional content.
                         </p>
                         <p className="card-text">
-                            <small className="text-muted">Last updated 3 mins ago</small>
+                          <a href="https://gblog.gjergjkadriu.com/" target="_blank">
+                            https://gblog.gjergjkadriu.com/
+                          </a>
                         </p>
                         </div>
                         {/*end card-body*/}
