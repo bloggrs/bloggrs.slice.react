@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default props => {
     const style = props.sideBarOpened ? { marginLeft: 230 } : { margin: 0 };
-    console.log(props.children)
+    const location = useLocation();
+    const { pathname } = location;
+    const path_of_authentication = pathname.indexOf("login") !== -1 || pathname.indexOf("register") !== -1
+    if (path_of_authentication) return props.children;
     return (
         <div className="page-wrapper" style={style}>
         <div className="topbar">

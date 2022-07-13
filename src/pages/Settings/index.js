@@ -3,6 +3,7 @@ import React from "react";
 export default props => {
     return (
         <div className="container row">
+            <h4 className="mt-4 mb-4">Blog Settings</h4>
             <div className="col-md-8 row">
                 <div className="col-2" style={{ margin: "auto auto"}}>
                   <label class="mt-2 form-label mb-lg-0 text-end">Thumbnail: </label>

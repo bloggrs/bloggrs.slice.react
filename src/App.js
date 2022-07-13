@@ -20,6 +20,8 @@ const SinglePost = React.lazy(() => import("./pages/SinglePost"));
 const Comments = React.lazy(() => import("./pages/Comments"));
 const SingleComment = React.lazy(() => import("./pages/SingleComment"));
 const Settings = React.lazy(() => import("./pages/Settings"));
+const Login = React.lazy(() => import("./pages/Login"));
+const Register = React.lazy(() => import("./pages/Register"));
 
 function App() {
   const location = useLocation();
@@ -51,6 +53,8 @@ function App() {
                   <Route exact path="/comments" element={<Comments/>} />
                   <Route exact path="/comments/:comment_id" element={<SingleComment/>} />
                   <Route exact path="/settings" element={<Settings/>}/>
+                  <Route exact path="/login" element={<Login/>}/>
+                  <Route exact path="/register" element={<Register/>}/>
                   <Route path="*" element={<E404/>} />
               </Routes>
             {/* <Posts/> */}

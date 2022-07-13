@@ -1,8 +1,13 @@
 import React from "react";
 import FeatherIcon from "feather-icons-react";
 import Item from "./Item";
+import { useLocation } from "react-router";
 
 export default props => {
+    const location = useLocation();
+    const { pathname } = location;
+    const path_of_authentication = pathname.indexOf("login") !== -1 || pathname.indexOf("register") !== -1
+    if (path_of_authentication) return props.children;
     if (!props.opened) return <></>
     return (
         <div className="left-sidenav">
@@ -40,6 +45,7 @@ export default props => {
                     className="simplebar-content-wrapper"
                     style={{ height: "100%", overflow: "hidden scroll" }}
                 >
+      <div className="col-9" style={{margin: 'auto auto'}}><select className="form-select" aria-label="Default select example"><option value={4}>Gjergj's Blog</option><option value={1}>Software's Blog</option><option value={2}>Draft</option></select></div>
                     <div
                     className="simplebar-content"
                     style={{ padding: "0px 0px 70px" }}
