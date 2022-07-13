@@ -13,9 +13,12 @@ import React, { useState, Suspense } from "react";
 import Loading from "./components/Loading";
 import { Route, Routes } from "react-router";
 import { useLocation } from "react-router-dom";
+import MyProfile from './pages/MyProfile';
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Posts = React.lazy(() => import("./pages/Posts"));
+const Teams = React.lazy(() => import("./pages/Teams"));
+const SingleTeam = React.lazy(() => import("./pages/SingleTeam"));
 const SinglePost = React.lazy(() => import("./pages/SinglePost"));
 const Comments = React.lazy(() => import("./pages/Comments"));
 const SingleComment = React.lazy(() => import("./pages/SingleComment"));
@@ -33,12 +36,16 @@ function App() {
   const { pathname } = window.location;
   const isComment = pathname.indexOf("comment") !== -1;
   const isPost = pathname.indexOf("task") !== -1;
+  const isTeam = pathname.indexOf("team") !== -1;
   if (isComment) {
     newButton.label = "New comment"
     newButton.to = "/comments/create"
   } else if (isPost) {
     newButton.label = "New post"
-    newButton.to = "/posts  /create"
+    newButton.to = "/posts/create"
+  } else if (isTeam) {
+    newButton.label = "New team"
+    newButton.to = "/teams/create"
   }
   if (location.hash == "404") return <E404/>
   return (
@@ -48,11 +55,14 @@ function App() {
           <PageWrapper newButton={newButton} sideBarOpened={sideBarOpened} toggleSideBar={toggleSideBar}>
               <Routes>
                   <Route exact path="/" element={<Dashboard/> } />
+                  <Route exact path="/teams" element={<Teams/>} />
+                  <Route exact path="/teams/:team_id" element={<SingleTeam/>} />
                   <Route exact path="/posts" element={<Posts/>} />
                   <Route exact path="/posts/:post_id" element={<SinglePost/>} />
                   <Route exact path="/comments" element={<Comments/>} />
                   <Route exact path="/comments/:comment_id" element={<SingleComment/>} />
                   <Route exact path="/settings" element={<Settings/>}/>
+                  <Route exact path="/me" element={<MyProfile/>}/>
                   <Route exact path="/login" element={<Login/>}/>
                   <Route exact path="/register" element={<Register/>}/>
                   <Route path="*" element={<E404/>} />

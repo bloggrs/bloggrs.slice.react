@@ -27,7 +27,7 @@ export default props => {
                     <a className="btn btn-primary w-100 waves-effect waves-light" href="index.html">Back to Dashboard <i className="fas fa-redo ms-1" /></a>                         
                   </div>
                   <div className="card-body bg-light-alt text-center">
-                    <span className="text-muted d-none d-sm-inline-block">Mannatthemes © 2022</span>                                            
+                    <span className="text-muted d-none d-sm-inline-block">Bloggrs © 2022</span>                                            
                   </div>
                 </div>{/*end card*/}
               </div>{/*end col*/}

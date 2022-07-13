@@ -121,7 +121,7 @@ export default props => {
                     </div>
                   </div>{/*end card-body*/}
                   <div className="card-body bg-light-alt text-center">
-                    <span className="text-muted d-none d-sm-inline-block">Mannatthemes © 2022</span>                                            
+                    <span className="text-muted d-none d-sm-inline-block">Bloggrs © 2022</span>                                            
                   </div>
                 </div>{/*end card*/}
               </div>{/*end col*/}

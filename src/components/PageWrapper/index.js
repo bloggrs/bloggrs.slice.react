@@ -302,25 +302,25 @@ export default props => {
                     />
                 </a>
                 <div className="dropdown-menu dropdown-menu-end">
-                    <a className="dropdown-item" href="pages-profile.html">
-                    <svg
-                        width={24}
-                        height={24}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="feather feather-user align-self-center icon-xs icon-dual me-1"
-                    >
-                        <g>
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                        <circle cx={12} cy={7} r={4} />
-                        </g>
-                    </svg>{" "}
-                    Profile
-                    </a>
+                    <Link className="dropdown-item" to="/me">
+                        <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-user align-self-center icon-xs icon-dual me-1"
+                        >
+                            <g>
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx={12} cy={7} r={4} />
+                            </g>
+                        </svg>{" "}
+                        Profile
+                    </Link>
                     <a className="dropdown-item" href="apps-contact-list.html">
                     <svg
                         width={24}
@@ -403,9 +403,9 @@ export default props => {
                 {props.children}
             </div>
             <footer className="footer text-center text-sm-start">
-            © Dastone{" "}
+            © Bloggrs{" "}
             <span className="text-muted d-none d-sm-inline-block float-end">
-                Crafted with <i className="mdi mdi-heart text-danger" /> by Mannatthemes
+                Crafted with <i className="mdi mdi-heart text-danger" /> by Bloggrs
             </span>
             </footer>
         </div>

@@ -23,7 +23,7 @@ export default props => {
             <div className="col mt-1">
                 <div className="card">
                 <div className="card-header">
-                    <h4 className="card-title">Basic Form</h4>
+                    <h4 className="card-title">Edit Comment</h4>
                     <p className="text-muted mb-0">Basic example to demonstrate Bootstrap’s form styles.</p> 
                 </div>{/*end card-header*/}
                 <div className="card-body">
@@ -40,8 +40,8 @@ export default props => {
                         <label className="form-label" htmlFor="exampleFormControlTextarea1">Content</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={"Nice work you've put there!"} />
                     </div>
-                        <button type="submit" className="btn btn-primary">Save</button>
-                        <button type="button" style={{ marginLeft: 15 }} className=" btn btn-danger">Cancel</button>
+                        <button type="submit" className="btn btn-soft-primary btn-md">Save</button>
+                        <button type="button" style={{ marginLeft: 15 }} className="btn btn-soft-danger btn-md">Cancel</button>
                     </form>                                           
                 </div>{/*end card-body*/}
                 </div>{/*end card*/}

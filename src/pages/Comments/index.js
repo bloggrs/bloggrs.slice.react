@@ -127,7 +127,7 @@ export default props => {
                   </tbody>
                 </table>{/*end /table*/}
               </div>{/*end /tableresponsive*/}
-              <ul class="pagination mt-1 mr-auto">
+              <ul class="pagination mt-3 mr-auto">
                                             <li class="page-item">
                                                 <a class="page-link" href="#" aria-label="Previous">
                                                     <span aria-hidden="true">«</span>
