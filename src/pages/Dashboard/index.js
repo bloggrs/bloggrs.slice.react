@@ -7,7 +7,7 @@ export default props => {
             <div className="mt-auto row">
                 <div className="card mb-3">
                     <div className="row no-gutters">
-                      <div className="">
+                      <div className="row">
                         <div className="col-md-3 align-self-center text-center">
                           <img
                           className=""
