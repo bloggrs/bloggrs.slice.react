@@ -22,6 +22,8 @@ const SingleTeam = React.lazy(() => import("./pages/SingleTeam"));
 const SinglePost = React.lazy(() => import("./pages/SinglePost"));
 const Comments = React.lazy(() => import("./pages/Comments"));
 const SingleComment = React.lazy(() => import("./pages/SingleComment"));
+const Categories = React.lazy(() => import("./pages/Categories"));
+const SingleCategory = React.lazy(() => import("./pages/SingleCategory"));
 const Settings = React.lazy(() => import("./pages/Settings"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Register = React.lazy(() => import("./pages/Register"));
@@ -38,6 +40,7 @@ function App() {
   const isComment = pathname.indexOf("comment") !== -1;
   const isPost = pathname.indexOf("task") !== -1;
   const isTeam = pathname.indexOf("team") !== -1;
+  const isCategory = pathname.indexOf("categories") !== -1;
   if (isComment) {
     newButton.label = "New comment"
     newButton.to = "/comments/create"
@@ -47,6 +50,9 @@ function App() {
   } else if (isTeam) {
     newButton.label = "New team"
     newButton.to = "/teams/create"
+  } else if (isCategory) {
+    newButton.label = "New category"
+    newButton.to = "/categories/create"
   }
   if (location.hash == "404") return <E404/>
   return (
@@ -62,6 +68,8 @@ function App() {
                   <Route exact path="/posts/:post_id" element={<SinglePost/>} />
                   <Route exact path="/comments" element={<Comments/>} />
                   <Route exact path="/comments/:comment_id" element={<SingleComment/>} />
+                  <Route exact path="/categories" element={<Categories/>} />
+                  <Route exact path="/categories/:category_id" element={<SingleCategory/>} />
                   <Route exact path="/settings" element={<Settings/>}/>
                   <Route exact path="/me" element={<MyProfile/>}/>
                   <Route exact path="/login" element={<Login/>}/>

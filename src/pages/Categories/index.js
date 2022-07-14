@@ -8,10 +8,10 @@ export default props => {
           <div className="page-title-box">
             <div className="row">
               <div className="col">
-                <h4 className="page-title">Comments</h4>
+                <h4 className="page-title">Categories</h4>
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item"><a href="javascript:void(0);">Bloggrs</a></li>
-                  <li className="breadcrumb-item active">Comments</li>
+                  <li className="breadcrumb-item active">Categories</li>
                 </ol>
               </div>{/*end col*/}
               <div className="col-auto align-self-center">
@@ -73,9 +73,8 @@ export default props => {
                   <thead>
                     <tr>
                       <th>ID</th>
+                      <th>Name</th>
                       <th>Created By</th>
-                      <th>Post</th>
-                      <th>Content</th>
                       <th>Created at</th>
                       <th className="text-right">Action</th>
                     </tr>
@@ -83,9 +82,8 @@ export default props => {
                   <tbody>
                     <tr>
                       <td>#1</td>
-                      <td>Gjergj Kadriu</td>
-                      <td><a href="#" className="btn btn-link">1</a></td>
-                      <td>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Cum sociis natoque penatibus et magnis.</td>
+                      <td>Personal Blog</td>
+                      <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
                         <div className="dropdown d-inline-block">
@@ -101,9 +99,8 @@ export default props => {
                     </tr>
                     <tr>
                       <td>#1</td>
-                      <td>Gjergj Kadriu</td>
-                      <td><a href="#" className="btn btn-link">1</a></td>
-                      <td>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Cum sociis natoque penatibus et magnis.</td>
+                      <td>Fashion Industry</td>
+                      <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
                         <div className="dropdown d-inline-block">
@@ -120,9 +117,8 @@ export default props => {
                     </tr>
                     <tr>
                       <td>#1</td>
-                      <td>Gjergj Kadriu</td>
-                      <td><a href="#" className="btn btn-link">1</a></td>
-                      <td>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Cum sociis natoque penatibus et magnis.</td>
+                      <td>Lorem ipsum</td>
+                      <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
                         <div className="dropdown d-inline-block">
@@ -138,9 +134,8 @@ export default props => {
                     </tr>
                     <tr>
                       <td>#1</td>
-                      <td>Gjergj Kadriu</td>
-                      <td><a href="#" className="btn btn-link">1</a></td>
-                      <td>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Cum sociis natoque penatibus et magnis.</td>
+                      <td>Personal Blog</td>
+                      <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
                         <div className="dropdown d-inline-block">

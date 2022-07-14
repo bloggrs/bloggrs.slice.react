@@ -15,7 +15,7 @@ export default props => {
                 <div className="navbar-custom">
                     <h3 className="ml-2" style={{ marginLeft: 25 }}>Setup your new blog</h3>
                 </div>
-                { props.children }}
+                { props.children }
             </div>
         </div>
        )

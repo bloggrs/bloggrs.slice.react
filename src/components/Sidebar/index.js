@@ -85,6 +85,7 @@ export default props => {
                         <li className="menu-label mt-0">Main</li>
                         <Item label={"Dashboard"} to="/" icon="home" className="feather feather-home align-self-center menu-icon"/>
                         <Item label={"Posts"} to="/posts" icon="list"/>
+                        <Item label={"Categories"} to="/categories" icon="align-right"/>
                         <Item label={"Comments"} to="/comments" icon="message-square"/>
                         <Item label={"Teams"} to="/teams" icon="user"/>
                         <Item label={"Settings"} to="/settings" icon="settings"/>
