@@ -28,6 +28,15 @@ export default props => {
                     <textarea type="text" className="form-control" placeholder="Enter blog description.." aria-label="Example text with button addon" aria-describedby="button-addon1" />
                 </div>
             </div>
+            <div className="col-md-8 row">
+                <div className="col-3" style={{ margin: "auto auto"}}>
+                  <label class="mt-2 form-label mb-lg-0 text-end">Include inside header: </label>
+                </div>
+                <div className="col-2 card-body m-auto">
+                    <textarea type="text" className="form-control" placeholder="Enter blog description.." aria-label="Example text with button addon" aria-describedby="button-addon1" />
+                </div>
+            </div>
+
         </div>
     )
 }
