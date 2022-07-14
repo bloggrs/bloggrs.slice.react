@@ -15,14 +15,15 @@ export default props =>{
     const STEP_1 = "general";
     const STEP_2 = "category";
     const STEP_3 = "choose_url";
-    const STEP_4 = "confirm_details";
+    const STEP_4 = "choose_theme";
+    const STEP_5 = "confirm_details";
 
     
     useEffect(() => {
         addEventListener('hashchange', func);
         return () => removeEventListener('hashchange', func);
     })
-    const STEPS = [ STEP_1, STEP_2, STEP_3, STEP_4 ] ;
+    const STEPS = [ STEP_1, STEP_2, STEP_3, STEP_4, STEP_5 ] ;
     const getDoneClassOrEmpty = STEP => {
         const index = STEPS.indexOf(STEP);
         const _current = STEPS.indexOf(hash);
@@ -93,10 +94,24 @@ export default props =>{
                     >
                     <a
                         id="form-horizontal-t-3"
-                        href="#confirm_details"
+                        href="#choose_theme"
                         aria-controls="form-horizontal-p-3"
                     >
-                        <span className="number">4.</span> Confirm details
+                        <span className="number">4.</span> Choose theme
+                    </a>
+                    </div>
+                    <div
+                    role="tab"
+                    className={`last ${getDoneClassOrEmpty(STEP_5)}`}
+                    aria-disabled="false"
+                    aria-selected="false"
+                    >
+                    <a
+                        id="form-horizontal-t-4"
+                        href="#confirm_details"
+                        aria-controls="form-horizontal-p-4"
+                    >
+                        <span className="number">5.</span> Confirm details
                     </a>
                     </div>
                 </div>
@@ -360,8 +375,82 @@ export default props =>{
             </div>
         </div>
     </div>
+</div>        <div style={{ display: hash === STEP_4 ? "block" : "none" }} className="container row">
+  <h4 className="mt-4 mb-4">Choose the theme of your blog</h4>
+  <p className="mt-4 mb-4">You can change this later anytime.</p>
+        <div className="row">
+        <div className="col-8">
+    <div className="card">
+        <div className="card-body">
+        <div className="blog-card">
+            <img
+                style={{
+                    width: "100%",
+                    height: "100%"
+                }}
+            src="/assets/images/small/img-1.jpg"
+            alt=""
+            className="img-fluid rounded"
+            />
+        </div>
+        {/*end blog-card*/}
+        </div>
+        {/*end card-body*/}
+    </div>
+  {/*end card*/}
+    </div>
+    <div className="col-4">
+    <div className="card">
+        <div className="card-body">
+        <div className="blog-card">
+            <h4 className="mt-4 mb-4">Minimalistic</h4>
+            <p className="mt-4 mb-4">Version: 1.0.1</p>
+            <p className="mt-10 mb-10">
+                Minimalistic theme is great for blogger who enjoy the 
+                minimum visual garbage needed for their posts to get 
+                across. Timeless, easy, and accessible.
+            </p>
+        </div>
+        {/*end blog-card*/}
+        </div>
+        <div className="card-footer" style={{ borderTop: "none" }}>
+            <div style={{ display: "flex", marginTop: "2vh" }}>
+            <div style={{ width: "50%", textAlign: "left" }}>
+                <button
+                className="btn btn-outline-light"
+                style={{ right: "-6vw", marginRight: "2vw" }}
+                >
+                Previous
+                </button>
+            </div>
+            <div style={{ width: "50%", textAlign: "right", display: "inline" }}>
+                <button
+                className="btn btn-outline-primary"
+                style={{ right: "-6vw", marginRight: "0.5vw" }}
+                >
+                Next
+                </button>
+            </div>
+            </div>
+
+        </div>
+        {/*end card-body*/}
+    </div>
+    <div className="row">
+    <button
+                className="btn btn-outline-primary col-3"
+                style={{ right: "-6vw", marginLeft: "auto", marginRight: "0.7vw" }}
+                >
+                Continue
+                </button>
+    </div>
+
+  {/*end card*/}
+    </div>
+        </div>
+
 </div>
-        <div style={{ display: hash === STEP_4 ? "block" : "none" }} className="container row">
+        <div style={{ display: hash === STEP_5 ? "block" : "none" }} className="container row">
   <h4 className="mt-4 mb-4">Confirm details</h4>
   <div className="col-md-8 row">
     <div className="col-2" style={{ margin: "auto" }}>
