@@ -89,7 +89,27 @@ export default props => {
                         <Item label={"Tags"} to="/tags" icon="align-right"/>
                         <Item label={"Comments"} to="/comments" icon="message-square"/>
                         <Item label={"Teams"} to="/teams" icon="user"/>
-                        <Item label={"Settings"} to="/settings" icon="settings"/>
+                        <Item label={"Settings"}  icon="settings"
+                            to="/settings"
+                            items={[
+                                {
+                                    label: "General",
+                                    to: "/settings/general"
+                                },
+                                {
+                                    label: "Blog Category",
+                                    to: "/settings/category"
+                                },
+                                {
+                                    label: "URL",
+                                    to: "/settings/url"
+                                },
+                                {
+                                    label: "Theme",
+                                    to: "/settings/theme"
+                                }
+                            ]}
+                        />
                     </ul>
                     <div className="update-msg text-center">
                         <a

@@ -14,6 +14,10 @@ import Loading from "./components/Loading";
 import { Route, Routes } from "react-router";
 import { useLocation } from "react-router-dom";
 import MyProfile from './pages/MyProfile';
+import General from './pages/Settings/General';
+import BlogCategory from './pages/Settings/BlogCategory';
+import ChooseURL from './pages/Settings/ChooseURL';
+import ChooseTheme from './pages/Settings/ChooseTheme';
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Posts = React.lazy(() => import("./pages/Posts"));
@@ -78,7 +82,14 @@ function App() {
                   <Route exact path="/categories/:category_id" element={<SingleCategory/>} />
                   <Route exact path="/tags" element={<Tags/>} />
                   <Route exact path="/tags/:tag_id" element={<SingleTag/>} />
+
                   <Route exact path="/settings" element={<Settings/>}/>
+                  <Route exact path="/settings/general" element={<General/>}/>
+                  <Route exact path="/settings/category" element={<BlogCategory/>}/>
+                  <Route exact path="/settings/url" element={<ChooseURL/>}/>
+                  <Route exact path="/settings/theme" element={<ChooseTheme/>}/>
+
+
                   <Route exact path="/me" element={<MyProfile/>}/>
                   <Route exact path="/login" element={<Login/>}/>
                   <Route exact path="/register" element={<Register/>}/>
