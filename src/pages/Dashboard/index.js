@@ -62,7 +62,7 @@ export default props => {
                                 Site Plan: Free
                             </p>
                             <p className="card-text align-self-center row m-0">
-                                <span className="special-a">Change plan</span>
+                                <span className="special-a disabled">Change plan</span>
                             </p>
                           </div>
                           <div className="card-body col-md-4 row m-auto">

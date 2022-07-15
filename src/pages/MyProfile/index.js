@@ -38,6 +38,21 @@ const InfoTabModalBody = props => {
                 </div>
                 <div className="form-group row">
                     <label className="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center">
+                    Display name
+                    </label>
+                    <div className="col-lg-9 col-xl-8">
+                        <input
+                            className="form-control"
+                            type="text"
+                            defaultValue="Ros"
+                        />
+                        <span className="form-text text-muted font-12">
+                            The name displayed to the users.
+                        </span>
+                    </div>
+                </div>
+                <div className="form-group row">
+                    <label className="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center">
                     Email Address
                     </label>
                     <div className="col-lg-9 col-xl-8">
@@ -67,8 +82,7 @@ const InfoTabModalBody = props => {
                         <input
                         type="text"
                         className="form-control"
-                        defaultValue={+123456789}
-                        placeholder="Phone"
+                        placeholder={+123456789}
                         aria-describedby="basic-addon1"
                         />
                     </div>
@@ -684,6 +698,43 @@ export default props => {
                         </ul>
                         </div>
                         {/*end col*/}
+                        <div className="col-lg-4 align-self-center">
+                        <div className="row">
+                            <div className="col-auto text-end border-end">
+                            <button
+                                type="button"
+                                className="btn btn-soft-primary btn-icon-circle btn-icon-circle-sm mb-2"
+                            >
+                                <i className="fab fa-facebook-f" />
+                            </button>
+                            <p className="mb-0 fw-semibold">Facebook</p>
+                            <h4 className="m-0 fw-bold">
+                                25k{" "}
+                                <span className="text-muted font-12 fw-normal">
+                                Followers
+                                </span>
+                            </h4>
+                            </div>
+                            {/*end col*/}
+                            <div className="col-auto">
+                            <button
+                                type="button"
+                                className="btn btn-soft-info btn-icon-circle btn-icon-circle-sm mb-2"
+                            >
+                                <i className="fab fa-twitter" />
+                            </button>
+                            <p className="mb-0 fw-semibold">Twitter</p>
+                            <h4 className="m-0 fw-bold">
+                                58k{" "}
+                                <span className="text-muted font-12 fw-normal">
+                                Followers
+                                </span>
+                            </h4>
+                            </div>
+                            {/*end col*/}
+                        </div>
+                        {/*end row*/}
+                        </div>
                         {/*end col*/}
                     </div>
                     {/*end row*/}

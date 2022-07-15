@@ -8,10 +8,10 @@ export default props => {
           <div className="page-title-box">
             <div className="row">
               <div className="col">
-                <h4 className="page-title">#1 - Personal Blog</h4>
+                <h4 className="page-title">#1 - Funny</h4>
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item"><a href="javascript:void(0);">Bloggrs</a></li>
-                  <li className="breadcrumb-item active">Categories</li>
+                  <li className="breadcrumb-item active">Tags</li>
                   <li className="breadcrumb-item active">#1</li>
                 </ol>
               </div>{/*end col*/}
@@ -23,7 +23,7 @@ export default props => {
             <div className="col mt-1">
                 <div className="card">
                 <div className="card-header">
-                    <h4 className="card-title">Edit category</h4>
+                    <h4 className="card-title">Edit tag</h4>
                     <p className="text-muted mb-0">Basic example to demonstrate Bootstrap’s form styles.</p> 
                 </div>{/*end card-header*/}
                 <div className="card-body">
@@ -32,7 +32,7 @@ export default props => {
                             <div className="d-flex">
                                 <div className="col m-auto d-flex">
                                     <label className="col-1 form-label" style={{ margin: "auto 0", marginRight: "2vh" }} htmlFor="exampleFormControlTextarea1">Name</label>
-                                    <input className="form-control" style={{ width: "50%" }} id="exampleFormControlTextarea1" rows={3} placeholder={"Personal Blog"} />
+                                    <input className="form-control" style={{ width: "50%" }} id="exampleFormControlTextarea1" rows={3} placeholder={"Funny"} />
                                 </div>
                             </div>
                             <div className="col m-auto d-flex">
@@ -46,7 +46,7 @@ export default props => {
                             <div className="d-flex">
                                 <div className="col m-auto d-flex">
                                     <label className="col-1 form-label" style={{ margin: "auto 0", marginRight: "2vh" }} htmlFor="exampleFormControlTextarea1">Slug</label>
-                                    <input className="form-control" style={{ width: "50%" }} id="exampleFormControlTextarea1" rows={3} placeholder={"personal-blog"} />
+                                    <input className="form-control" style={{ width: "50%" }} id="exampleFormControlTextarea1" rows={3} placeholder={"funny"} />
                                 </div>
                             </div>
                             <div className="col m-auto d-flex">

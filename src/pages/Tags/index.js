@@ -1,5 +1,4 @@
 import React from "react";
-import DeleteItemModal from "../../components/DeleteItemModal";
 
 export default props => {
     return (
@@ -9,10 +8,10 @@ export default props => {
           <div className="page-title-box">
             <div className="row">
               <div className="col">
-                <h4 className="page-title">Categories</h4>
+                <h4 className="page-title">Tags</h4>
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item"><a href="javascript:void(0);">Bloggrs</a></li>
-                  <li className="breadcrumb-item active">Categories</li>
+                  <li className="breadcrumb-item active">Tags</li>
                 </ol>
               </div>{/*end col*/}
               <div className="col-auto align-self-center">
@@ -85,9 +84,9 @@ export default props => {
                   <tbody>
                     <tr>
                       <td>#1</td>
-                      <td>Personal Notes</td>
-                      <td style={{ textTransform: "lowercase" }}>Personal-Notes</td>
-                      <td><a className="btn btn-link" href="/posts?category_name=personal-notes">1</a></td>
+                      <td>Recent news</td>
+                      <td style={{ textTransform: "lowercase" }}>recent-news</td>
+                      <td><a className="btn btn-link" href="/posts?tag_name=recent-news">1</a></td>
                       <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
@@ -97,16 +96,7 @@ export default props => {
                           </a>
                           <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
                             <a className="dropdown-item" href="#">View/Edit</a>
-                            <DeleteItemModal
-                              header="Delete confirmation"
-                              title={`Delete "Personal Notes" category`}
-                            >
-                              { ({ toggle }) => {
-                                return (
-                                  <a onClick={toggle} className="dropdown-item" href="#">Delete</a>
-                                )
-                              }}
-                            </DeleteItemModal>
+                            <a className="dropdown-item" href="#">Delete</a>
                           </div>
                         </div>
                       </td>
@@ -115,7 +105,7 @@ export default props => {
                       <td>#1</td>
                       <td>Fashion Industry</td>
                       <td style={{ textTransform: "lowercase" }}>Fashion-Industry</td>
-                      <td><a className="btn btn-link" href="/posts?category_name=personal-notes">1</a></td>
+                      <td><a className="btn btn-link" href="/posts?tag_name=recent-news">1</a></td>
                       <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
@@ -125,16 +115,7 @@ export default props => {
                           </a>
                           <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
                             <a className="dropdown-item" href="#">View/Edit</a>
-                            <DeleteItemModal
-                              header="Delete confirmation"
-                              title={`Delete "Personal Notes" category`}
-                            >
-                              { ({ toggle }) => {
-                                return (
-                                  <a onClick={toggle} className="dropdown-item" href="#">Delete</a>
-                                )
-                              }}
-                            </DeleteItemModal>
+                            <a className="dropdown-item" href="#">Delete</a>
                           </div>
                         </div>
                       </td>
@@ -144,7 +125,7 @@ export default props => {
                       <td>#1</td>
                       <td>Lorem ipsum</td>
                       <td style={{ textTransform: "lowercase" }}>Lorem-ipsum</td>
-                      <td><a className="btn btn-link" href="/posts?category_name=personal-notes">1</a></td>
+                      <td><a className="btn btn-link" href="/posts?tag_name=recent-news">1</a></td>
                       <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
@@ -154,25 +135,16 @@ export default props => {
                           </a>
                           <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
                             <a className="dropdown-item" href="#">View/Edit</a>
-                            <DeleteItemModal
-                              header="Delete confirmation"
-                              title={`Delete "Personal Notes" category`}
-                            >
-                              { ({ toggle }) => {
-                                return (
-                                  <a onClick={toggle} className="dropdown-item" href="#">Delete</a>
-                                )
-                              }}
-                            </DeleteItemModal>
+                            <a className="dropdown-item" href="#">Delete</a>
                           </div>
                         </div>
                       </td>
                     </tr>
                     <tr>
                       <td>#1</td>
-                      <td>Personal Notes</td>
-                      <td style={{ textTransform: "lowercase" }}>Personal-Notes</td>
-                      <td><a className="btn btn-link" href="/posts?category_name=personal-notes">1</a></td>
+                      <td>Recent news</td>
+                      <td style={{ textTransform: "lowercase" }}>recent-news</td>
+                      <td><a className="btn btn-link" href="/posts?tag_name=recent-news">1</a></td>
                       <td><a href="#" className="btn btn-link">Gjergj Kadriu</a></td>
                       <td>25/11/2018</td>
                       <td className="text-right">
@@ -182,16 +154,7 @@ export default props => {
                           </a>
                           <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
                             <a className="dropdown-item" href="#">View/Edit</a>
-                            <DeleteItemModal
-                              header="Delete confirmation"
-                              title={`Delete "Personal Notes" category`}
-                            >
-                              { ({ toggle }) => {
-                                return (
-                                  <a onClick={toggle} className="dropdown-item" href="#">Delete</a>
-                                )
-                              }}
-                            </DeleteItemModal>
+                            <a className="dropdown-item" href="#">Delete</a>
                           </div>
                         </div>
                       </td>
