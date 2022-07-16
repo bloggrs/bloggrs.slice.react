@@ -4,7 +4,7 @@ import Item from "./Item";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-export default props => {
+const Sidebar = props => {
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -74,7 +74,7 @@ export default props => {
                     className="simplebar-content-wrapper"
                     style={{ height: "100%", overflow: "hidden scroll" }}
                 >
-      <div className="col-9" style={{margin: 'auto auto'}}><select onChange={onBlogChange} className="form-select" aria-label="Default select example"><option value={4}>Gjergj's Blog</option><option value={1}>Software's Blog</option><option value={2}>Draft</option>
+      <div className="col-9 select-blog"><select onChange={onBlogChange} className="form-select" aria-label="Default select example"><option value={4}>Gjergj's Blog</option><option value={1}>Software's Blog</option><option value={2}>Draft</option>
         <option  value={"create"}>Create</option>
       </select></div>
                     <div
@@ -167,3 +167,5 @@ export default props => {
         </div>
     )
 }
+
+export default Sidebar;

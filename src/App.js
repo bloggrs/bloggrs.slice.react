@@ -4,7 +4,7 @@ import FeatherIcon from 'feather-icons-react';
 import Sidebar from './components/Sidebar';
 import PageWrapper from './components/PageWrapper';
 import E404 from './pages/E404';
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 // import Dashboard from './pages/Dashboard';
 // import Posts from './pages/Posts';
 // import Comments from './pages/Comments';
@@ -40,6 +40,12 @@ function App() {
   
   const [ sideBarOpened, setSideBarOpened ] = useState(true);
   const toggleSideBar = () => setSideBarOpened(!sideBarOpened);
+
+  useEffect(() => {
+    const { body } = document;
+    if (!sideBarOpened) return body.classList.add("enlarge-menu");
+    return body.classList.remove("enlarge-menu"); 
+  }, [ sideBarOpened ]);
 
   const newButton = { label: "New post", to: "/posts/create" };
   const { pathname } = window.location;

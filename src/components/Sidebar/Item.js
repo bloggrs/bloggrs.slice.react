@@ -8,17 +8,37 @@ const FakeLink = ({ toggleOpen }) => ({ children, className }) => {
         e.preventDefault();
         toggleOpen()
     }
-    return <a className={className} onClick={onClick} style={{
-    }}>{children}</a>
+    return (
+        <a href="#" className={className} onClick={onClick}>
+            {children}
+        </a>
+    )
 }
 
-export default props => {
+const getExact = ({ pathname, to, items }) => {
+    const hasItems = items && Boolean(items.length);
+    if (hasItems) {
+        const includesPathname = to.indexOf(pathname) !== -1
+        const exception_1 = pathname === "/" || !pathname
+        const exception_2 = to !== pathname;
+        const exception = exception_1 && exception_2
+        if (exception) return false
+        return includesPathname
+    }
+    return to === pathname
+}
+
+const Item = props => {
     const [ open, setOpen ] = useState(false);
     const toggleOpen = () => setOpen(!open);
 
     const location = useLocation();
     const { pathname } = location;
-    const exact = props.items ? props.to.indexOf(pathname) !== -1 : pathname === props.to;
+    const exact = getExact({ 
+        items: props.items,
+        to: props.to, 
+        pathname
+    })
     const style = {};
     if (exact) style.borderBottom = "1px solid rgb(171 180 213)"
 
@@ -57,3 +77,5 @@ export default props => {
         </>
     )
 }
+
+export default Item;
