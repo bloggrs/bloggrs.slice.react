@@ -95,7 +95,6 @@ function App() {
                   <Route exact path="/settings/url" element={<ChooseURL/>}/>
                   <Route exact path="/settings/theme" element={<ChooseTheme/>}/>
 
-
                   <Route exact path="/me" element={<MyProfile/>}/>
                   <Route exact path="/login" element={<Login/>}/>
                   <Route exact path="/register" element={<Register/>}/>
